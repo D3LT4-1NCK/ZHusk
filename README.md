@@ -217,4 +217,4 @@ _If you have any problems, questions, suggestions, or anything else, feel free t
 
 ## Links:
 
-**Repository:** https://pypi.org/project/zhusk/0.1.0/
+**Repository:** https://pypi.org/project/zhusk/0.1.1/
