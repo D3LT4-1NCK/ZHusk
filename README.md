@@ -4,7 +4,7 @@ _ZHusk, a library to streamline workflows and assist those who work extensively 
 
 ## Version:
 
-**Zhusk Version:** _0.1.0_
+**Zhusk Version:** _0.1.1_
 
 ## Installation:
 
