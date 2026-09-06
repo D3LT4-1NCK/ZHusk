@@ -15,7 +15,7 @@ pip install zhusk
 ## To Update:
 
 ```
-pip install --upgrade zhusk
+pip install --upgrade --force-reinstall zhusk
 ```
 
 ## Requirements:
