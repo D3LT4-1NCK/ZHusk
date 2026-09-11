@@ -4,7 +4,7 @@ _ZHusk, a library to streamline workflows and assist those who work extensively 
 
 ## Version:
 
-**Zhusk Version:** _0.1.1_
+**Zhusk Version:** _0.1.3_
 
 ## Installation:
 
@@ -33,6 +33,10 @@ _To assist the 'termios' library._
 ### time
 
 _For animated typing functions._
+
+### signal
+
+_To disable/enable the 'keyboard interrupt'_
 
 ### platform
 
@@ -120,6 +124,70 @@ zhusk.clear() # If the guy's terminal was dirty, this would have cleaned it.
 print("Hello world")
 ```
 
+### off_interrupt()
+
+_This disables the 'keyboard interrupt' capability, preventing 'Ctrl + C' from interrupting the code currently running in the terminal._
+
+_Windows, MacOS and Linux._
+
+**Usage example:**
+
+```python
+import zhusk
+
+zhusk.off_interrupt()
+```
+
+### on_interrupt()
+
+_This reverses the action of the 'off_interrupt' function._
+
+_Windows, MacOS and Linux._
+
+**Usage example:**
+
+```python
+import zhusk
+
+zhusk.off_interrupt() # CTRL + C disabled.
+
+zhusk.on_interrupt() # CTRL + C enabled.
+```
+
+### validate_ip()
+
+_Checks if an IPv4 or IPv6 is valid; returns 'True' or 'False'._
+
+_Windows, MacOS and Linux._
+
+**Usage example:**
+
+```python
+import zhusk
+
+print("Hello world")
+ip = input("Enter your IP: ")
+check_ip = zhusk.validate_ip(ip)
+print(f"Your IP is: {check_ip}") # False/True.
+```
+
+### validate_email()
+
+_Email validation based on RFC 5322 documentation; it returns 'True' or 'False' based on the email's validity._
+
+_Windows, MacOS and Linux._
+
+**Usage example:**
+
+```python
+import zhusk
+
+print("Hello world")
+email = input("Enter your e-mail: ")
+check_email = zhusk.validate_email(email)
+print(f"Your e-mail is: {check_email}") # False/True.
+```
+
 ### my_ip()
 
 _Shows your public IPV4 or IPV6._
@@ -131,7 +199,7 @@ _Windows, MacOS and Linux._
 ```python
 import zhusk
 
-print("My cyber program")
+print("Hello world")
 print(f"Your IPV4 is: {zhusk.my_ip()}") # Shows IPV4.
 ```
 
@@ -217,4 +285,4 @@ _If you have any problems, questions, suggestions, or anything else, feel free t
 
 ## Links:
 
-**PyPI Documentation:** https://pypi.org/project/zhusk/0.1.1/
+Repository: https://github.com/D3LT4-1NCK/ZHusk
