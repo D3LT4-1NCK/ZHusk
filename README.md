@@ -1,10 +1,10 @@
 # Zhusk:
 
-_ZHusk, a library to streamline workflows and assist those who work extensively with the terminal and more._
+*ZHusk, a library to streamline workflows and assist those who work extensively with the terminal and more.*
 
 ## Version:
 
-**Zhusk Version:** _0.1.3_
+**Zhusk Version:** *0.1.4*
 
 ## Installation:
 
@@ -15,7 +15,7 @@ pip install zhusk
 ## To Update:
 
 ```
-pip install --upgrade --force-reinstall zhusk
+pip install --upgrade zhusk
 ```
 
 ## Requirements:
@@ -28,39 +28,39 @@ pip install --upgrade --force-reinstall zhusk
 
 ### sys
 
-_To assist the 'termios' library._
+*To assist the 'termios' library.*
 
 ### time
 
-_For animated typing functions._
-
-### signal
-
-_To disable/enable the 'keyboard interrupt'_
+*For animated typing functions.*
 
 ### platform
 
-_To determine which operating system it is._
+*To determine which operating system it is.*
 
 ### subprocess
 
-_To run commands such as IP discovery._
+*To run commands such as IP discovery.*
 
 ### termios
 
-_It is only imported if the system is macOS/Linux and the user employs a function that requires it._
+*It is only imported if the system is macOS/Linux and the user employs a function that requires it.*
+
+### signal
+
+*For enable/disable keyboard interrupt.*
 
 ## Functions:
 
 ### block()
 
-_This turns off terminal 'ECHO', preventing the terminal from immediately displaying what is typed—everything goes into the keyboard buffer instead; unless used in conjunction with the 'ignore' function, everything previously typed will appear as soon as 'unblock' is used._
+*This turns off terminal 'ECHO', preventing the terminal from immediately displaying what is typed—everything goes into the keyboard buffer instead; unless used in conjunction with the 'ignore' function, everything previously typed will appear as soon as 'unblock' is used.*
 
-_Only MacOS and Linux._
+*Only MacOS and Linux.*
 
 **Usage example:**
 
-```python
+```
 import zhusk
 
 zhusk.block()
@@ -72,11 +72,11 @@ print("Hello world")
 
 *Typically used when you want to use an 'input()' function; you can also use 'input_slow(support=True)'—simply include a 'block()' at the beginning of the code, and you won't need to worry about it.*
 
-_Only MacOS and Linux._
+*Only MacOS and Linux.*
 
 **Usage example:**
 
-```python
+```
 import zhusk
 import time
 
@@ -92,13 +92,13 @@ zhusk.block()
 
 ### ignore()
 
-_This clears the user's keyboard buffer, ensuring that multiple characters that had not appeared due to the 'block' function are not displayed upon receiving new 'input'._
+*This clears the user's keyboard buffer, ensuring that multiple characters that had not appeared due to the 'block' function are not displayed upon receiving new 'input'.*
 
-_Only MacOS and Linux._
+*Only MacOS and Linux.*
 
 **Usage example:**
 
-```python
+```
 import zhusk
 
 zhusk.block()
@@ -111,13 +111,13 @@ input("Your name: ")
 
 ### clear()
 
-_Clears the terminal, quickly and simply._
+*Clears the terminal, quickly and simply.*
 
-_Windows, MacOS and Linux._
+*Windows, MacOS and Linux.*
 
 **Usage example:**
 
-```python
+```
 import zhusk
 
 zhusk.clear() # If the guy's terminal was dirty, this would have cleaned it.
@@ -126,13 +126,13 @@ print("Hello world")
 
 ### off_interrupt()
 
-_This disables the 'keyboard interrupt' capability, preventing 'Ctrl + C' from interrupting the code currently running in the terminal._
+*This disables the 'keyboard interrupt' capability, preventing 'Ctrl + C' from interrupting the code currently running in the terminal.*
 
-_Windows, MacOS and Linux._
+*Windows, MacOS and Linux.*
 
 **Usage example:**
 
-```python
+```
 import zhusk
 
 zhusk.off_interrupt()
@@ -140,13 +140,13 @@ zhusk.off_interrupt()
 
 ### on_interrupt()
 
-_This reverses the action of the 'off_interrupt' function._
+*This reverses the action of the 'off_interrupt' function.*
 
-_Windows, MacOS and Linux._
+*Windows, MacOS and Linux.*
 
 **Usage example:**
 
-```python
+```
 import zhusk
 
 zhusk.off_interrupt() # CTRL + C disabled.
@@ -156,13 +156,13 @@ zhusk.on_interrupt() # CTRL + C enabled.
 
 ### validate_ip()
 
-_Checks if an IPv4 or IPv6 is valid; returns 'True' or 'False'._
+*Checks if an IPv4 or IPv6 is valid; returns 'True' or 'False'.*
 
-_Windows, MacOS and Linux._
+*Windows, MacOS and Linux.*
 
 **Usage example:**
 
-```python
+```
 import zhusk
 
 print("Hello world")
@@ -173,13 +173,13 @@ print(f"Your IP is: {check_ip}") # False/True.
 
 ### validate_email()
 
-_Email validation based on RFC 5322 documentation; it returns 'True' or 'False' based on the email's validity._
+*Email validation based on RFC 5322 documentation; it returns 'True' or 'False' based on the email's validity.*
 
-_Windows, MacOS and Linux._
+*Windows, MacOS and Linux.*
 
 **Usage example:**
 
-```python
+```
 import zhusk
 
 print("Hello world")
@@ -190,13 +190,13 @@ print(f"Your e-mail is: {check_email}") # False/True.
 
 ### my_ip()
 
-_Shows your public IPV4 or IPV6._
+*Shows your public IPV4 or IPV6.*
 
-_Windows, MacOS and Linux._
+*Windows, MacOS and Linux.*
 
 **Usage example:**
 
-```python
+```
 import zhusk
 
 print("Hello world")
@@ -205,13 +205,13 @@ print(f"Your IPV4 is: {zhusk.my_ip()}") # Shows IPV4.
 
 ### print_slow()
 
-_It displays text letter by letter in an animated fashion, creating a typing effect that you will likely want to use throughout the entire system._
+*It displays text letter by letter in an animated fashion, creating a typing effect that you will likely want to use throughout the entire system.*
 
-_Windows, MacOS and Linux._
+*Windows, MacOS and Linux.*
 
 **Usage example:**
 
-```python
+```
 import zhusk
 
 zhusk.print_slow("Hello world")
@@ -220,13 +220,13 @@ zhusk.print_slow("Hello world", temp=0.01) # The default 'temp' is 0.02, but you
 
 ### input_slow()
 
-_It displays text letter by letter in an animated fashion, creating a typing effect; and at the end, it returns an 'input()'._
+*It displays text letter by letter in an animated fashion, creating a typing effect; and at the end, it returns an 'input()'.*
 
-_Windows, MacOS and Linux._
+*Windows, MacOS and Linux.*
 
 **Usage example:**
 
-```python
+```
 import zhusk
 
 zhusk.input_slow("Your name: ")
@@ -235,7 +235,7 @@ zhusk.input_slow("Your country: ", temp=0.01) # The default 'temp' is 0.02, but 
 
 ## General Example (Windows, MacOS, Linux):
 
-```python
+```
 import zhusk
 
 zhusk.clear() # Clears terminal.
@@ -247,7 +247,7 @@ zhusk.print_slow(f"\nSure, {name}.\nYour public IPV4 is: {zhusk.my_ip()}\nYour p
 
 ## General Example (MacOS, Linux):
 
-```python
+```
 import zhusk
 
 zhusk.block() # Now the user cannot clutter the terminal while your program is running.
@@ -260,9 +260,9 @@ zhusk.print_slow(f"\nSure, {name}.\nYour public IPV4 is: {zhusk.my_ip()}\nYour p
 
 ## Error Handling:
 
-_ZHusk only raises errors of type 'ZhuskError'; the recommended approach is to read the error message and act accordingly, but if you'd rather ignore it, you can do so as follows:_
+*ZHusk only raises errors of type 'ZhuskError'; the recommended approach is to read the error message and act accordingly, but if you'd rather ignore it, you can do so as follows:*
 
-```python
+```
 import zhusk
 
 try:
@@ -273,16 +273,16 @@ except zhusk.ZhuskError:
 
 ## License and Author:
 
-_This project is licensed under the MIT License. See the LICENSE file for details._
+*This project is licensed under the MIT License. See the LICENSE file for details.*
 
-_Zhusk Project - By FloppzH_
+*Zhusk Project - By FloppzH*
 
 ## Support:
 
 **Discord Contact:** floppzh
 
-_If you have any problems, questions, suggestions, or anything else, feel free to get in touch._
+*If you have any problems, questions, suggestions, or anything else, feel free to get in touch.*
 
 ## Links:
 
-Repository: https://github.com/D3LT4-1NCK/ZHusk
+Repository: <https://github.com/D3LT4-1NCK/ZHusk>
