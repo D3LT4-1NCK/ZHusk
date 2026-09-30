@@ -285,4 +285,4 @@ except zhusk.ZhuskError:
 
 ## Links:
 
-Repository: <https://github.com/D3LT4-1NCK/ZHusk>
+PyPI: <https://pypi.org/project/zhusk/>
