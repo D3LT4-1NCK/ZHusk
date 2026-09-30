@@ -4,7 +4,7 @@
 
 ## Version:
 
-**Zhusk Version:** *0.1.4*
+**Zhusk Version:** *0.1.6*
 
 ## Installation:
 
